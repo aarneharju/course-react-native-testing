@@ -21,10 +21,14 @@ export default function TabOneScreen() {
           placeholder="Search galaxies"
           style={{ padding: 10, backgroundColor: '#fff', flex: 1 }}
           value={search}
-          onChangeText={(text) => setSearch(text)}
+          onChangeText={text => setSearch(text)}
         />
       </View>
-      {search !== '' && <Text style={{ fontSize: 16, marginTop: 20 }}>Searched for: {search}</Text>}
+      {search !== '' && (
+        <Text style={{ fontSize: 16, marginTop: 20 }}>
+          Searched for: {search}
+        </Text>
+      )}
       <GalacticCounter />
     </View>
   );
