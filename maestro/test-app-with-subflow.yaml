@@ -1,0 +1,7 @@
+appId: host.exo.Exponent # this is for expo go, for development builds check you app.json for the id
+---
+- runFlow:
+    file: subflows/load-products.yaml
+- assertVisible:
+    id: 'product-item'
+    index: 2
